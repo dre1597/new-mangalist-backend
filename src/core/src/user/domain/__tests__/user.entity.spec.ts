@@ -1,16 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { UserEntity, UserProps } from '../user.entity';
+import { UserEntity } from '../user.entity';
+import { getUserProps, getUserPropsWithoutRole } from './utils';
 
 describe('UserEntity', () => {
   it('should be possible to create an UserEntity', () => {
-    const props: UserProps = {
-      name: 'any_name',
-      email: 'any_email',
-      cpf: 'any_cpf',
-      phone: 'any_phone',
-      password: 'any_password',
-      role: 'USER',
-    };
+    const props = getUserProps;
 
     const userEntity = UserEntity.create(props);
 
@@ -26,15 +20,7 @@ describe('UserEntity', () => {
   });
 
   it('should create an UserEntity with a USER role if role is not passed', () => {
-    const props: UserProps = {
-      name: 'any_name',
-      email: 'any_email',
-      cpf: 'any_cpf',
-      phone: 'any_phone',
-      password: 'any_password',
-    };
-
-    const userEntity = UserEntity.create(props);
+    const userEntity = UserEntity.create(getUserPropsWithoutRole);
 
     expect(userEntity.role).toBe('USER');
   });
