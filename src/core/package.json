@@ -4,7 +4,9 @@
   "description": "the core workspace for the new mangalist backend study project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --cache --fix",
+    "format": "prettier --write"
   },
   "author": "André Pereira",
   "license": "ISC",

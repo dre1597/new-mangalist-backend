@@ -4,11 +4,22 @@
   "description": "new mangalist backend study project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "prepare": "husky install"
   },
   "author": "André Pereira",
   "license": "ISC",
   "workspaces": [
     "src/core"
-  ]
+  ],
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": "npm run lint",
+    "*.{js,css,md,ts,tsx,jsx}": "npm run format"
+  }
 }
