@@ -4,7 +4,7 @@
   "description": "new mangalist backend study project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:staged": "npm run test:staged --workspaces",
     "lint": "npm run lint --workspaces",
     "format": "npm run format --workspaces",
     "prepare": "husky install"
@@ -20,6 +20,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": "npm run lint",
-    "*.{js,css,md,ts,tsx,jsx}": "npm run format"
+    "*.{js,css,md,ts,tsx,jsx}": "npm run format",
+    "*.{js,ts}": "npm run test:staged"
   }
 }
