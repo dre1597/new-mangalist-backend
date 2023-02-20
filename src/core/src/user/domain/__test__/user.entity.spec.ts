@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { UserEntity } from '../user.entity';
-import { getUserProps, getUserPropsWithoutRole } from './utils';
+import { getUserProps, getUserPropsWithoutRole } from './mock';
 
 describe('UserEntity', () => {
   it('should be possible to create an UserEntity', () => {

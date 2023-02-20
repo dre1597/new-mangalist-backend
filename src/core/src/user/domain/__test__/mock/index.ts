@@ -1,4 +1,4 @@
-import { UserProps } from '../../user.entity';
+import { UserProps } from '../../types';
 
 export const getUserProps: UserProps = {
   name: 'any_name',
