@@ -2,7 +2,7 @@
 
 ## About
 
-The ideia of the project is to improve this [Mangalist Project](https://github.com/dre1597/MangaList_JSON-server) with some techs and arch that I want to test.
+The ideia of the project is to improve this [Mangalist Project](https://github.com/dre1597/MangaList_JSON-server) with some tools and arch structure that I want to test.
 
 ## Tools
 
