@@ -4,7 +4,8 @@
   "description": "the core workspace for the new mangalist backend study project",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --run",
+    "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:staged": "vitest related --run",
     "lint": "eslint --cache --fix",

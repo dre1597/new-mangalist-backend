@@ -4,6 +4,9 @@
   "description": "new mangalist backend study project",
   "main": "index.js",
   "scripts": {
+    "test": "npm run test --workspaces",
+    "test:watch": "npm run test:watch --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
     "test:staged": "npm run test:staged --workspaces",
     "lint": "npm run lint --workspaces",
     "format": "npm run format --workspaces",
