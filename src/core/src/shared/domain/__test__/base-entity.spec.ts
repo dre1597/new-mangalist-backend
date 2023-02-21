@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { validateUuid } from '../../../utils/regex/validate-uuid';
+import { validateUuid } from '../../../utils/regex';
 import { BaseEntity } from '../base-entity';
 
 const executeAfterTwoMinutes = (func) => {
