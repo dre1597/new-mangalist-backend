@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { validateUuid } from '../../../utils/regex/validate-uuid';
 import { BaseEntity } from '../base-entity';
-import { regexUUID4 } from './utils';
 
 const executeAfterTwoMinutes = (func) => {
   setTimeout(func, 1000 * 2);
@@ -20,7 +20,7 @@ describe('BaseEntity', () => {
   it('should initialize its own fields', () => {
     const entity = new StubBaseEntity();
 
-    expect(entity.id).toMatch(regexUUID4);
+    expect(entity.id).toMatch(validateUuid);
     expect(entity.createdAt).toBeInstanceOf(Date);
     expect(entity.updatedAt).toBeInstanceOf(Date);
   });
